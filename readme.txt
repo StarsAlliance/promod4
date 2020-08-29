@@ -12,7 +12,7 @@ Zip-package (promodlive221_eu.zip) contains:
 
 LICENSE
 pml221\mod.ff
-pml220\pml221.iwd
+pml221\pml221.iwd
 pml221\z_c_r.iwd
 pb\stock_iwd_md5.cfg
 pb\promod_iwd_md5.cfg
