@@ -1,25 +1,29 @@
-Promod LIVE V2.20 EU - README
-http://www.codpromod.com
-2014-05-13 <promod [at] codpromod.com>
-#codpromod @ QuakeNet
+Promod LIVE V2.21 EU - README
+http://www.stars-alliance.ru
+2014-05-13 <promod [at] starsa.ru>
 
-Maintained by Ingram
+Maintained by DragonZX
+Original Maintained by Ingram
 
 Sponsored by FragNet
 http://www.fragnet.net
 
-Zip-package (promodlive220_eu.zip) contains:
+Zip-package (promodlive221_eu.zip) contains:
 
 LICENSE
-pml220\mod.ff
-pml220\pml220.iwd
-pml220\z_c_r.iwd
+pml221\mod.ff
+pml220\pml221.iwd
+pml221\z_c_r.iwd
 pb\stock_iwd_md5.cfg
 pb\promod_iwd_md5.cfg
 pb\pbsvuser.cfg
 readme.txt
 server_setup.txt
 server.cfg
+
+LIVE V2.21:
+- Added Russian translation
+- Prolonged support
 
 LIVE V2.20:
 - Fixed issues with vehicle damage source being different compared to previous releases
@@ -167,7 +171,7 @@ Q: What's the difference between the EU and NE version of Promod?
 A: The NE version of Promod has rate and cl_maxpackets settings unlocked and radar does not display enemy indicators while shooting. NE stands for Non-Europe.
 
 Q: My question is not answered here.
-A: Easiest way to contact us is via mail or join #codpromod @ QuakeNet.
+A: Easiest way to contact us is via mail
 
 Q: How do I get the training-dummy to work?
 A: First put up a local home-hosted server without PB (set sv_punkbuster to "0" in your config, start game, launch Promod from the mods-menu and load a map with the console or menu). The default button for spawning a bot is the "N" button (bind X "+actionslot 1").

@@ -126,7 +126,7 @@
 		}
 		itemDef
 		{
-			text			"www.codpromod.com"
+			text			"www.stars-alliance.ru"
 			style			0
 			textscale		0.2
 			textstyle		3
@@ -141,7 +141,7 @@
 		}
 		itemDef
 		{
-			text			"Current Promod Version: LIVE V2.20 EU"
+			text			"Current Promod Version: LIVE V2.21 EU"
 			style			0
 			textscale		0.25
 			textstyle		3

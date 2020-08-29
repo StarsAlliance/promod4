@@ -270,8 +270,8 @@ menuDef { \
 	IMPROVED_POPUP_SETUP_ONOPEN( "ocd_attachment_popup_assault"suffix, 6, (CHOICE_X( pos )-2), (CHOICE_Y( pos )+26+y_offset), ;, execnow "set "UI_FOCUSFIRST" "REF_ATTACHMENT_NONE"; set ui_inside_popup attachment";, 0 )\
 	onClose{execnow "set ui_inside_popup 0";} \
 	LOCAL_ATTACHMENT_INFO_WINDOW( "loadout_"ptype )\
-	LOCAL_ATTACHMENT_ITEM( 1, "1. No Attachment", stat_slot, "assault", NUM_NONE, "none", ;, ptype, statDvar, 0 )\
-	LOCAL_ATTACHMENT_ITEM( 2, "2. Silencer", stat_slot, "assault", NUM_SUPPRESSOR, "silencer", ;, ptype, statDvar, SILENCER_NEW_BITMASK )\
+	LOCAL_ATTACHMENT_ITEM( 1, "1. Нет", stat_slot, "assault", NUM_NONE, "none", ;, ptype, statDvar, 0 )\
+	LOCAL_ATTACHMENT_ITEM( 2, "2. Глушитель", stat_slot, "assault", NUM_SUPPRESSOR, "silencer", ;, ptype, statDvar, SILENCER_NEW_BITMASK )\
 	execKey "1" { LOCAL_ATTACHMENT_ACTION( 1, "none", 1, "assault" ); }\
 	execKey "2" { LOCAL_ATTACHMENT_ACTION( 2, "silencer", 1, "assault" ); }\
 }\
@@ -279,8 +279,8 @@ menuDef	{ \
 	IMPROVED_POPUP_SETUP_ONOPEN( "ocd_attachment_popup_SMG"suffix, 6, (CHOICE_X( pos )-2), (CHOICE_Y( pos )+26+y_offset), ;, execnow "set "UI_FOCUSFIRST" "REF_ATTACHMENT_NONE"; set ui_inside_popup attachment";, 0 )\
 	onClose{execnow "set ui_inside_popup 0";} \
 	LOCAL_ATTACHMENT_INFO_WINDOW( "loadout_"ptype )\
-	LOCAL_ATTACHMENT_ITEM( 1, "1. No Attachment", stat_slot, "specops", NUM_NONE, "none", ;, ptype, statDvar, 0 )\
-	LOCAL_ATTACHMENT_ITEM( 2, "2. Silencer", stat_slot, "specops", NUM_SUPPRESSOR, "silencer", ;, ptype, statDvar, SILENCER_NEW_BITMASK )\
+	LOCAL_ATTACHMENT_ITEM( 1, "1. Нет", stat_slot, "specops", NUM_NONE, "none", ;, ptype, statDvar, 0 )\
+	LOCAL_ATTACHMENT_ITEM( 2, "2. Глушитель", stat_slot, "specops", NUM_SUPPRESSOR, "silencer", ;, ptype, statDvar, SILENCER_NEW_BITMASK )\
 	execKey "1" { LOCAL_ATTACHMENT_ACTION( 1, "none", 1, "specops" ); }\
 	execKey "2" { LOCAL_ATTACHMENT_ACTION( 2, "silencer", 1, "specops" ); }\
 }
@@ -288,8 +288,8 @@ menuDef	{
 	IMPROVED_POPUP_SETUP_ONOPEN( "ocd_attachment_popup_pistol", 6, (CHOICE_X( 2 )-2), (CHOICE_Y( 2 )), ;, execnow "set "UI_FOCUSFIRST" "REF_ATTACHMENT_NONE"; set ui_inside_popup attachment";, 0 )
 	onClose{execnow "set ui_inside_popup 0";}
 	LOCAL_ATTACHMENT_INFO_WINDOW( "loadout_secondary" )
-	LOCAL_ATTACHMENT_ITEM( 1, "1. No Attachment", CAC_SECONDARY_ATTACHMENT, "pistol", NUM_NONE, "none", ;, "secondary", "ui_secondary_weapon", 0 )
-	LOCAL_ATTACHMENT_ITEM( 2, "2. Silencer", CAC_SECONDARY_ATTACHMENT, "pistol", NUM_SUPPRESSOR, "silencer", ;, "secondary", "ui_secondary_weapon", SILENCER_NEW_BITMASK )
+	LOCAL_ATTACHMENT_ITEM( 1, "1. Нет", CAC_SECONDARY_ATTACHMENT, "pistol", NUM_NONE, "none", ;, "secondary", "ui_secondary_weapon", 0 )
+	LOCAL_ATTACHMENT_ITEM( 2, "2. Глушитель", CAC_SECONDARY_ATTACHMENT, "pistol", NUM_SUPPRESSOR, "silencer", ;, "secondary", "ui_secondary_weapon", SILENCER_NEW_BITMASK )
 	execKey "1" { LOCAL_ATTACHMENT_ACTION2( 1, "none", 1, "pistol" ); }
 	execKey "2" { LOCAL_ATTACHMENT_ACTION2( 2, "silencer", 1, "pistol" ); }
 }
@@ -340,7 +340,7 @@ menuDef
 	IMPROVED_POPUP_SETUP_ONOPEN( "ocd_popup_cac_secondary", 6, (CHOICE_X( 2 )-2), (CHOICE_Y( 2 )), ;, execnow "set "UI_FOCUSFIRST" "REF_M9BERETTA"; set selected_weapon_class pistol; set ui_inside_popup pistol";, 0 )
 	onClose{execnow "set ui_inside_popup 0";}
 	LOCAL_SIDEARM_INFO_WINDOW( "ui_sidearm_highlighted" )
-	LOCAL_SIDEARM_ITEM( 1, "1. Gold Desert Eagle", STAT_PISTOL_DESERTEAGLEGOLD, REF_DESERTEAGLEGOLD, "ui_sidearm_highlighted" )
+	LOCAL_SIDEARM_ITEM( 1, "1. Золотой Desert Eagle", STAT_PISTOL_DESERTEAGLEGOLD, REF_DESERTEAGLEGOLD, "ui_sidearm_highlighted" )
 	LOCAL_SIDEARM_ITEM( 2, "2. Desert Eagle", STAT_PISTOL_DESERTEAGLE, REF_DESERTEAGLE, "ui_sidearm_highlighted" )
 	LOCAL_SIDEARM_ITEM( 3, "3. M1911 .45", STAT_PISTOL_COLT45, REF_COLT45, "ui_sidearm_highlighted" )
 	LOCAL_SIDEARM_ITEM( 4, "4. USP .45", STAT_PISTOL_USP, REF_USP, "ui_sidearm_highlighted" )
@@ -380,8 +380,8 @@ menuDef
 	IMPROVED_POPUP_SETUP_ONOPEN( "ocd_popup_cac_extra", 5, (CHOICE_X( 3 )-2), (CHOICE_Y( 3 )+4), ;, execnow "set "UI_FOCUSFIRST" "REF_FLASH_X1"; set ui_inside_popup sgrenade";, 0 )
 	onClose{ execnow "set ui_inside_popup 0"; }
 	LOCAL_SGRENADE_INFO_WINDOW( "ui_sgrenade_highlighted" )
-	LOCAL_SGRENADE_ITEM( 1, "1. Flash", STAT_FLASH_X1, REF_FLASH_X1, "ui_sgrenade_highlighted" )
-	LOCAL_SGRENADE_ITEM( 2, "2. Smoke", STAT_SMOKE_X1, REF_SMOKE_X1, "ui_sgrenade_highlighted" )
+	LOCAL_SGRENADE_ITEM( 1, "1. СШГ", STAT_FLASH_X1, REF_FLASH_X1, "ui_sgrenade_highlighted" )
+	LOCAL_SGRENADE_ITEM( 2, "2. Дымовая", STAT_SMOKE_X1, REF_SMOKE_X1, "ui_sgrenade_highlighted" )
 	execKey "1" { LOCAL_SGRENADE_ACTION(REF_FLASH_X1); }
 	execKey "2" { LOCAL_SGRENADE_ACTION(REF_SMOKE_X1); }
 }
