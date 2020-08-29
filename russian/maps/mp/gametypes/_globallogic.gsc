@@ -1307,16 +1307,16 @@ menuAutoAssign()
 	if( self.pers["team"] == "allies" && oldTeam != self.pers["team"] )
 	{
 		if( game["attackers"] == "allies" && game["defenders"] == "axis" )
-			iPrintLN(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє РђС‚Р°РєРµ");
+			iPrintLN(self.name + " Присоединился к Атаке");
 		else
-			iPrintLN(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє Р—Р°С‰РёС‚Рµ");
+			iPrintLN(self.name + " Присоединился к Защите");
 	}
 	else if( self.pers["team"] == "axis" && oldTeam != self.pers["team"] )
 	{
 		if( game["attackers"] == "allies" && game["defenders"] == "axis" )
-			iPrintLN(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє Р—Р°С‰РёС‚Рµ");
+			iPrintLN(self.name + " Присоединился к Защите");
 		else
-			iPrintLN(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє РђС‚Р°РєРµ");
+			iPrintLN(self.name + " Присоединился к Атаке");
 	}
 
 	if ( oldTeam != self.pers["team"] && ( oldTeam == "allies" || oldTeam == "axis" ) )
@@ -1426,9 +1426,9 @@ menuAllies()
 		self.freelook = undefined;
 
 		if( game["attackers"] == "allies" && game["defenders"] == "axis" && !self.switching )
-			iprintln(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє РђС‚Р°РєРµ");
+			iprintln(self.name + " Присоединился к Атаке");
 		else if ( !self.switching )
-			iprintln(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє Р—Р°С‰РёС‚Рµ");
+			iprintln(self.name + " Присоединился к Защите");
 
 		if ( oldTeam == "axis" )
 			thread maps\mp\gametypes\_promod::updateClassAvailability( oldTeam );
@@ -1513,9 +1513,9 @@ menuAxis()
 		self.freelook = undefined;
 
 		if( game["attackers"] == "allies" && game["defenders"] == "axis" && !self.switching )
-			iprintln(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє Р—Р°С‰РёС‚Рµ");
+			iprintln(self.name + " Присоединился к Защите");
 		else if ( !self.switching )
-			iprintln(self.name + " РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє РђС‚Р°РєРµ");
+			iprintln(self.name + " Присоединился к Атаке");
 
 		if ( oldTeam == "allies" )
 			thread maps\mp\gametypes\_promod::updateClassAvailability( oldTeam );
@@ -1541,7 +1541,7 @@ menuKillspec()
 
 	self.pers["class"] = undefined;
 	self.class = undefined;
-	self iprintln("Р’С‹Р±РµСЂРёС‚Рµ РєР»Р°СЃСЃ РґР»СЏ РІРѕР·СЂР°Р¶РґРµРЅРёСЏ");
+	self iprintln("Выберите класс для возраждения");
 	self setClientDvar("loadout_curclass", "");
 	self thread [[level.spawnSpectator]]( self.origin, self.angles );
 
@@ -1587,12 +1587,12 @@ menuSpectator()
 
 		if( game["attackers"] == "allies" && game["defenders"] == "axis" )
 			self setClientDvars(
-							"shout_attack_name", "РђС‚Р°РєР°",
-							"shout_defence_name", "Р—Р°С‰РёС‚Р°" );
+							"shout_attack_name", "Атака",
+							"shout_defence_name", "Защита" );
 		else
 			self setClientDvars(
-							"shout_attack_name", "Р—Р°С‰РёС‚Р°",
-							"shout_defence_name", "РђС‚Р°РєР°" );
+							"shout_attack_name", "Защита",
+							"shout_defence_name", "Атака" );
 
 		self setClientDvars(
 						"shout_scores_attack", game["teamScores"][game["attackers"]],
@@ -1601,7 +1601,7 @@ menuSpectator()
 		self setclientdvar( "g_scriptMainMenu", game["menu_shoutcast"] );
 
 		self notify("joined_spectators");
-		iprintln(self.name + "РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє РќР°Р±Р»СЋРґР°С‚РµР»СЏРј");
+		iprintln(self.name + "Присоединился к Наблюдателям");
 
 		self promod\shoutcast::loadOne();
 
@@ -3176,8 +3176,8 @@ Callback_PlayerDamage( eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, s
 			{
 				if ( sHitLoc == "none" )
 				{
-					eAttacker iprintln("Р’С‹ РЅР°РЅРµСЃР»Рё ^2" + iDamage + "^7 РїРѕРІСЂРµР¶РґРµРЅРёР№ " + self.name);
-					self iprintln(eAttacker.name + " РЅР°РЅРµСЃ ^1" + iDamage + "^7 РїРѕРІСЂРµР¶РґРµРЅРёР№ Р’Р°Рј");
+					eAttacker iprintln("Вы нанесли ^2" + iDamage + "^7 повреждений " + self.name);
+					self iprintln(eAttacker.name + " нанес ^1" + iDamage + "^7 повреждений Вам");
 				}
 				else
 				{
@@ -3205,15 +3205,15 @@ Callback_PlayerDamage( eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, s
 
 					metrestring = int(distance(self.origin, eAttacker.origin) * 2.54) / 100;
 
-					eAttacker iprintln("Р’С‹ РЅР°РЅРµСЃР»Рё ^2" + iDamage + "^7 РїРѕРІСЂРµР¶РґРµРЅРёР№ РЅР° РґРёСЃС‚Р°РЅС†РёРё ^2" + metrestring + "^7 РјРµС‚СЂРѕРІ ^2" + damagestring + "^7 РёРіСЂРѕРєСѓ " + self.name);
-					self iprintln(eAttacker.name + " РЅР°РЅРµСЃ ^1" + iDamage + "^7 РїРѕРІСЂРµР¶РґРµРЅРёР№ РЅР° РґРёСЃС‚Р°РЅС†РёРё ^1" + metrestring + "^7 РјРµС‚СЂРѕРІ ^1" + damagestring + "^7 Р’Р°Рј");
+					eAttacker iprintln("Вы нанесли ^2" + iDamage + "^7 повреждений на дистанции ^2" + metrestring + "^7 метров ^2" + damagestring + "^7 игроку " + self.name);
+					self iprintln(eAttacker.name + " нанес ^1" + iDamage + "^7 повреждений на дистанции ^1" + metrestring + "^7 метров ^1" + damagestring + "^7 Вам");
 				}
 			}
 			else if ( sHitLoc == "none" )
-				self iprintln("Р’С‹ РЅР°РЅРµСЃР»Рё ^1" + iDamage + "^7 РїРѕРІСЂРµР¶РґРµРЅРёР№ СЃРµР±Рµ");
+				self iprintln("Вы нанесли ^1" + iDamage + "^7 повреждений себе");
 		}
 		else if ( sMeansOfDeath == "MOD_FALLING" )
-			self iprintln("Р’С‹ РЅР°РЅРµСЃР»Рё ^1" + iDamage + "^7 РїРѕРІСЂРµР¶РґРµРЅРёР№ СЃРµР±Рµ");
+			self iprintln("Вы нанесли ^1" + iDamage + "^7 повреждений себе");
 	}
 
 	// Logging into file
