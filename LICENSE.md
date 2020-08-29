@@ -1,4 +1,4 @@
-Copyright (c) 2009-2017 Andreas Göransson &lt;andreas.goransson@gmail.com&gt;<br>
+Copyright (c) 2009-2017 Andreas Goransson &lt;andreas.goransson@gmail.com&gt;<br>
 Copyright (c) 2009-2017 Indrek Ardel &lt;indrek@ardel.eu&gt;
 
 ---

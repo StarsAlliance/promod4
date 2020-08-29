@@ -1,6 +1,6 @@
 /*
   Copyright (c) 2008 Matthias Lorenz
-  Copyright (c) 2009-2017 Andreas Göransson <andreas.goransson@gmail.com>
+  Copyright (c) 2009-2017 Andreas Goransson <andreas.goransson@gmail.com>
   Copyright (c) 2009-2017 Indrek Ardel <indrek@ardel.eu>
 
   This file is part of Call of Duty 4 Promod.
