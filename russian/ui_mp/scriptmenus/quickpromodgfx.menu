@@ -31,7 +31,7 @@
 		IMPROVED_POPUP_SETUP_ONOPEN( quickpromodgfx, 11.5, 4, 180, ;, setDvar cl_bypassMouseInput "1";, 0 )
 		onClose{ setDvar cl_bypassMouseInput "0" }
 
-		CHOICE_POPMENU_TITLE( "Р“СЂР°С„РёРєР° Promod" )
+		CHOICE_POPMENU_TITLE( "Графика Promod" )
 
 		itemDef
 		{
@@ -44,7 +44,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"Р’РёРґРёРјРѕСЃС‚СЊ:"
+			text			"Видимость:"
 			visible			1
 			decoration
 		}
@@ -59,7 +59,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			exp text		"1. РћСЃРІРµС‰РµРЅРёРµ: " + dvarString( sunlight )
+			exp text		"1. Освещение: " + dvarString( sunlight )
 			visible			1
 			decoration
 		}
@@ -76,7 +76,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"2. Р¤РёР»СЊС‚СЂ РєРёРЅРѕ: Р’С‹РєР»"
+			text			"2. Фильтр кино: Выкл"
 			visible			when ( !dvarInt( r_filmusetweaks ) )
 			decoration
 		}
@@ -91,7 +91,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"2. Р¤РёР»СЊС‚СЂ РєРёРЅРѕ: Р’РєР»"
+			text			"2. Фильтр кино: Вкл"
 			visible			when ( dvarInt( r_filmusetweaks ) )
 			decoration
 		}
@@ -108,7 +108,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"РўРµРєСЃС‚СѓСЂС‹:"
+			text			"Текстуры:"
 			visible			1
 			decoration
 		}
@@ -123,7 +123,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"3. Р¤РёР»СЊС‚СЂ С‚РµРєСЃС‚СѓСЂ: Р’РєР»"
+			text			"3. Фильтр текстур: Вкл"
 			visible			when ( !dvarInt( r_texfilterdisable ) )
 			decoration
 		}
@@ -138,7 +138,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"3. Р¤РёР»СЊС‚СЂ С‚РµРєСЃС‚СѓСЂ: Р’С‹РєР»"
+			text			"3. Фильтр текстур: Выкл"
 			visible			when ( dvarInt( r_texfilterdisable) )
 			decoration
 		}
@@ -155,7 +155,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			exp text		"4. РљР°СЂС‚С‹ РЅРѕСЂРјР°Р»РµР№: " + dvarString( r_normalmap )
+			exp text		"4. Карты нормалей: " + dvarString( r_normalmap )
 			visible			1
 			decoration
 		}
@@ -172,7 +172,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"Р Р°Р·РЅРѕРµ:"
+			text			"Разное:"
 			visible			1
 			decoration
 		}
@@ -187,7 +187,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			exp text		( "5. РњР°СЃС€С‚Р°Р± FOV: " + dvarString( cg_fovscale ) + " (" + int( dvarFloat( cg_fov ) * dvarFloat( cg_fovscale ) ) + ")" )
+			exp text		( "5. Масштаб FOV: " + dvarString( cg_fovscale ) + " (" + int( dvarFloat( cg_fov ) * dvarFloat( cg_fovscale ) ) + ")" )
 			visible			1
 			decoration
 		}
@@ -204,7 +204,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			exp text		( "6. Р Р°Р·РјС‹С‚РёРµ: " + dvarString( r_blur ) )
+			exp text		( "6. Размытие: " + dvarString( r_blur ) )
 			visible			1
 			decoration
 		}
@@ -221,7 +221,7 @@
 			textstyle		ITEM_TEXTSTYLE_SHADOWED
 			textscale		TEXTSIZE_SMALL
 			textaligny		8
-			text			"Esc. Р’С‹С…РѕРґ"
+			text			"Esc. Выход"
 			visible			1
 			decoration
 		}

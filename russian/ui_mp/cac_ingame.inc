@@ -417,13 +417,13 @@ menuDef	\
 	IMPROVED_POPUP_SETUP_ONOPEN( "ocd_popup_cac_camo"prefix, 7, (CHOICE_X( 1 )-2), (CHOICE_Y( 1 )+68), ;, execnow "set "UI_FOCUSFIRST" "REF_CAMO_NONE"; set ui_inside_popup camo";, 0 )\
 	onClose{onLeave;} \
 	LOCAL_CAMO_INFO_WINDOW( "ui_camo_highlighted" )\
-	LOCAL_CAMO_ITEM( 1, "1. None", CAMO_NONE, REF_CAMO_NONE, "ui_camo_highlighted", 0, 1 )\
-	LOCAL_CAMO_ITEM( 2, "2. Desert", CAMO_BROCKHUARD, REF_BROCKHUARD, "ui_camo_highlighted", DESERT_NEW_BITMASK, 1 )\
-	LOCAL_CAMO_ITEM( 3, "3. Woodland", CAMO_BUSHDWELLER, REF_BUSHDWELLER, "ui_camo_highlighted", WOODLAND_NEW_BITMASK, 1 )\
-	LOCAL_CAMO_ITEM( 4, "4. Digital", CAMO_BLACKWHITEMARPAT, REF_BLACKWHITEMARPAT, "ui_camo_highlighted", DIGITAL_NEW_BITMASK, 1 )\
-	LOCAL_CAMO_ITEM( 5, "5. Red Tiger", CAMO_TIGERRED, REF_TIGERRED, "ui_camo_highlighted", REDTIGER_NEW_BITMASK, 1 )\
-	LOCAL_CAMO_ITEM( 6, "6. Blue Tiger", CAMO_STAGGER, REF_STAGGER, "ui_camo_highlighted", BLUETIGER_NEW_BITMASK, 1 )\
-	LOCAL_CAMO_ITEM2( 7, "7. Golden", CAMO_GOLDEN, REF_GOLDEN, "ui_camo_highlighted", GOLDEN_NEW_BITMASK, 1 )\
+	LOCAL_CAMO_ITEM( 1, "1. Нет", CAMO_NONE, REF_CAMO_NONE, "ui_camo_highlighted", 0, 1 )\
+	LOCAL_CAMO_ITEM( 2, "2. Пустынный", CAMO_BROCKHUARD, REF_BROCKHUARD, "ui_camo_highlighted", DESERT_NEW_BITMASK, 1 )\
+	LOCAL_CAMO_ITEM( 3, "3. Лесной", CAMO_BUSHDWELLER, REF_BUSHDWELLER, "ui_camo_highlighted", WOODLAND_NEW_BITMASK, 1 )\
+	LOCAL_CAMO_ITEM( 4, "4. Цифровой", CAMO_BLACKWHITEMARPAT, REF_BLACKWHITEMARPAT, "ui_camo_highlighted", DIGITAL_NEW_BITMASK, 1 )\
+	LOCAL_CAMO_ITEM( 5, "5. Красный Тигр", CAMO_TIGERRED, REF_TIGERRED, "ui_camo_highlighted", REDTIGER_NEW_BITMASK, 1 )\
+	LOCAL_CAMO_ITEM( 6, "6. Синий Тигр", CAMO_STAGGER, REF_STAGGER, "ui_camo_highlighted", BLUETIGER_NEW_BITMASK, 1 )\
+	LOCAL_CAMO_ITEM2( 7, "7. Золотой", CAMO_GOLDEN, REF_GOLDEN, "ui_camo_highlighted", GOLDEN_NEW_BITMASK, 1 )\
 	execKey "1" { LOCAL_CAMO_ACTION(REF_CAMO_NONE); }\
 	execKey "2" { LOCAL_CAMO_ACTION(REF_BROCKHUARD); }\
 	execKey "3" { LOCAL_CAMO_ACTION(REF_BUSHDWELLER); }\

@@ -60,7 +60,7 @@
 			decoration
 		}
 
-		CHOICE_MENU_TITLE( "РўСЂР°РЅСЃР»СЏС†РёСЏ" )
+		CHOICE_MENU_TITLE( "Трансляция" )
 
 		#define BACK_OPEN;
 		#include "ui_mp/navcontrols.inc";
@@ -71,10 +71,10 @@
 		#undef	CHOICE_HORIZONTAL_ALIGN
 		#define CHOICE_HORIZONTAL_ALIGN HORIZONTAL_ALIGN_CENTER
 
-		CHOICE_BUTTON( 1, "РќР°Р±Р»СЋРґР°С‚РµР»СЊ", close self; )
-		CHOICE_BUTTON( 2, "РќР°СЃС‚СЂРѕР№РєРё С‚СЂР°РЅСЃР»СЏС†РёРё", scriptMenuResponse "shoutcast_setup"; )
-		CHOICE_BUTTON( 3, "РџСЂРѕСЃРјРѕС‚СЂ РєР°СЂС‚С‹", close self; open shoutcast_map; setDvar cl_bypassMouseInput "1"; )
-		CHOICE_BUTTON( 4, "Р“СЂР°С„РёРєР° Promod", open quickpromodgfx; )
+		CHOICE_BUTTON( 1, "Наблюдатель", close self; )
+		CHOICE_BUTTON( 2, "Настройки трансляции", scriptMenuResponse "shoutcast_setup"; )
+		CHOICE_BUTTON( 3, "Просмотр карты", close self; open shoutcast_map; setDvar cl_bypassMouseInput "1"; )
+		CHOICE_BUTTON( 4, "Графика Promod", open quickpromodgfx; )
 		CHOICE_BUTTON( 5, "@MPUI_CHANGE_TEAM", scriptMenuResponse "changeteam"; )
 		CHOICE_BUTTON( 6, "@MENU_CONTROLS", close self; open main_controls; )
 		CHOICE_BUTTON( 7, "@MENU_OPTIONS", close self; open main_options; execnow "set ui_allow_graphic_change 0"; )
